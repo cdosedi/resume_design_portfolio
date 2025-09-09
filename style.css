@@ -1,0 +1,549 @@
+/* style.css */
+
+/* Base Styles & Typography */
+:root {
+    --primary-color: #111;
+    /* Deep black for headings and accents */
+    --accent-color: #383838;
+    /* A slightly lighter black for borders and highlights */
+    --background-light: #ffffff;
+    /* Full white background */
+    --background-dark: #383838;
+    /* Deep black for the sidebar and form */
+    --text-dark: #333;
+    /* Dark gray for body text on light backgrounds */
+    --text-light: #f5f5f5;
+    /* Off-white for text on dark backgrounds */
+    --border-color: #ddd;
+    /* A light gray for borders */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+.resume-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header Section */
+.resume-header {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border: 4px solid var(--background-light);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.profile-img-fallback {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--background-light);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 0.95rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 300;
+}
+
+.contact-item i {
+    color: var(--background-light);
+}
+
+/* Main Content */
+.resume-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--background-dark);
+    padding: 40px 30px;
+    border-right: 1px solid var(--border-color);
+    color: var(--text-light);
+}
+
+.sidebar-section {
+    margin-bottom: 40px;
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--background-light);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid var(--background-light);
+    padding-bottom: 8px;
+}
+
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category-title {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.skill-list {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    list-style: none;
+    color: var(--text-light);
+}
+
+.skill-list li {
+    margin-bottom: 3px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.skill-list li::before {
+    content: "•";
+    color: var(--text-light);
+    position: absolute;
+    left: 0;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-degree {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.education-school {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.education-year {
+    color: #bbb;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 40px;
+    background-color: var(--background-light);
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 8px;
+}
+
+.summary-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    text-align: justify;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.company-name {
+    color: var(--accent-color);
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
+.job-date {
+    color: #777;
+    font-size: 0.9rem;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.job-description {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.job-description ul {
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.job-description li {
+    margin-bottom: 4px;
+}
+
+.project-item {
+    margin-bottom: 25px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+.project-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.project-subtitle {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-item {
+    background: var(--background-dark);
+    color: var(--text-light);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* "Get In Touch" Section */
+.get-in-touch-section {
+    background-color: var(--background-light);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.get-in-touch-section .section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.get-in-touch-section .section-title {
+    border-bottom-color: var(--primary-color);
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--background-light);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    text-align: left;
+    color: var(--text-dark);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    display: block;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--background-light);
+    color: var(--primary-color);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+.resume-footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.footer-statement {
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--background-light);
+    transform: scale(1.1);
+}
+
+.footer-copyright {
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .resume-header {
+        padding: 30px;
+    }
+
+    .name {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .resume-header {
+        padding: 25px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img,
+    .profile-img-fallback {
+        width: 100%;
+        height: 100%;
+    }
+
+    .name {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .contact-header {
+        justify-content: center;
+        font-size: 0.9rem;
+        gap: 15px;
+    }
+
+    .resume-body {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 25px;
+        order: 1;
+    }
+
+    .sidebar {
+        padding: 25px;
+        order: 2;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-date {
+        margin-top: 5px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .get-in-touch-section {
+        padding: 30px 0;
+    }
+}
+
+@media print {
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+        max-width: none;
+    }
+
+    .contact-form {
+        display: none;
+    }
+}
